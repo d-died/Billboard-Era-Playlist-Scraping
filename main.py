@@ -2,10 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 music_date = input("Which year do you want to travel to? Type the date in YYYY-MM-DD format: ")
-# music_date = "1994-12-12"
 response = requests.get(f"https://www.billboard.com/charts/hot-100/{music_date}")
 response_text = response.text
-# print(response_text)
 
 soup = BeautifulSoup(response_text, "html.parser")
 
